@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jhernandez30-cpu.github.io/Variedades-Nora/sitemap.xml

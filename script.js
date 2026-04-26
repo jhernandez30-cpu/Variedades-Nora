@@ -1,5 +1,5 @@
 const WHATSAPP_MESSAGE =
-  "Hola, Variedades Nora. Estoy interesado/a en conocer más sobre sus productos.";
+  "Hola, Variedades Nora. Estoy interesado/a en conocer más sobre sus bolsos, carteras, mochilas y cangureras.";
 const WHATSAPP_NUMBER = "50582299406";
 
 const createWhatsAppURL = (message = WHATSAPP_MESSAGE) =>
@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   whatsappLinks.forEach((link) => {
-    link.setAttribute("href", createWhatsAppURL());
+    const message = link.dataset.whatsappMessage || WHATSAPP_MESSAGE;
+    link.setAttribute("href", createWhatsAppURL(message));
     link.setAttribute("target", "_blank");
     link.setAttribute("rel", "noopener");
   });
@@ -33,9 +34,22 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", closeMenu);
   });
 
-  window.addEventListener("scroll", () => {
+  let ticking = false;
+  const updateHeader = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > 20);
-  });
+    ticking = false;
+  };
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
 
   contactForm?.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -48,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const composedMessage = [
       WHATSAPP_MESSAGE,
       name && `Mi nombre es ${name}.`,
-      category && `Me interesa: ${category}.`,
+      category && `Me interesa la categoría: ${category}.`,
       message && `Mensaje: ${message}`,
     ]
       .filter(Boolean)
@@ -75,60 +89,47 @@ function createParticles() {
   const particleLayer = document.querySelector(".hero-particles");
   if (!particleLayer) return;
 
-  for (let index = 0; index < 18; index += 1) {
+  for (let index = 0; index < 12; index += 1) {
     const particle = document.createElement("span");
     particle.className = index % 3 === 0 ? "decor-dot" : "particle";
     particle.style.left = `${8 + Math.random() * 84}%`;
     particle.style.top = `${18 + Math.random() * 68}%`;
-    particle.style.opacity = `${0.34 + Math.random() * 0.42}`;
+    particle.style.opacity = `${0.3 + Math.random() * 0.38}`;
     particleLayer.appendChild(particle);
   }
 }
 
 function runGSAPAnimations() {
-  if (!window.gsap) return;
+  if (!window.gsap || !window.ScrollTrigger) return;
 
   gsap.registerPlugin(ScrollTrigger);
 
   const heroTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
 
   heroTimeline
-    .from(".site-header", { y: -24, opacity: 0, duration: 0.8 })
-    .from(".hero .eyebrow", { y: 18, opacity: 0, duration: 0.55 }, "-=0.35")
-    .from(".hero h1", { y: 34, opacity: 0, duration: 0.8 }, "-=0.2")
-    .from(".hero-copy", { y: 26, opacity: 0, duration: 0.65 }, "-=0.35")
-    .from(".hero-actions .btn", { y: 22, opacity: 0, stagger: 0.08, duration: 0.55 }, "-=0.32")
-    .from(".hero-highlights span", { y: 18, opacity: 0, stagger: 0.08, duration: 0.45 }, "-=0.24")
+    .from(".site-header", { y: -24, opacity: 0, duration: 0.7 })
+    .from(".hero .eyebrow", { y: 16, opacity: 0, duration: 0.45 }, "-=0.25")
+    .from(".hero h1", { y: 28, opacity: 0, duration: 0.7 }, "-=0.2")
+    .from(".hero-copy", { y: 22, opacity: 0, duration: 0.55 }, "-=0.3")
+    .from(".hero-actions .btn", { y: 18, opacity: 0, stagger: 0.07, duration: 0.45 }, "-=0.24")
+    .from(".hero-highlights span", { y: 14, opacity: 0, stagger: 0.06, duration: 0.38 }, "-=0.18")
     .from(
       ".hero-photo, .hero-logo-mark",
-      { y: 44, opacity: 0, rotate: 2, stagger: 0.08, duration: 0.8 },
-      "-=0.72"
+      { y: 34, opacity: 0, rotate: 1.5, stagger: 0.07, duration: 0.65 },
+      "-=0.55"
     );
 
   gsap.utils.toArray(".reveal").forEach((element) => {
     gsap.from(element, {
       scrollTrigger: {
         trigger: element,
-        start: "top 82%",
+        start: "top 84%",
         toggleActions: "play none none reverse",
       },
-      y: 34,
+      y: 28,
       opacity: 0,
-      duration: 0.75,
+      duration: 0.62,
       ease: "power3.out",
-    });
-  });
-
-  gsap.utils.toArray(".category-card, .product-card, .team-card, .benefit-card").forEach((card) => {
-    gsap.to(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 0.55,
-      },
-      y: -14,
-      ease: "none",
     });
   });
 }
@@ -138,33 +139,23 @@ function runAnimeDetails() {
 
   anime({
     targets: ".particle",
-    translateY: () => anime.random(-22, 22),
-    translateX: () => anime.random(-14, 14),
-    scale: () => anime.random(8, 14) / 10,
+    translateY: () => anime.random(-18, 18),
+    translateX: () => anime.random(-12, 12),
+    scale: () => anime.random(8, 13) / 10,
     easing: "easeInOutSine",
-    duration: () => anime.random(2600, 4600),
-    delay: anime.stagger(120),
+    duration: () => anime.random(2800, 4600),
+    delay: anime.stagger(130),
     direction: "alternate",
     loop: true,
   });
 
   anime({
     targets: ".decor-dot",
-    translateY: () => anime.random(-16, 16),
-    opacity: [0.22, 0.68],
+    translateY: () => anime.random(-14, 14),
+    opacity: [0.2, 0.62],
     easing: "easeInOutQuad",
-    duration: 3200,
+    duration: 3400,
     delay: anime.stagger(180),
-    direction: "alternate",
-    loop: true,
-  });
-
-  anime({
-    targets: ".hero-logo-mark",
-    translateY: [-5, 8],
-    rotate: [-1.2, 1.2],
-    easing: "easeInOutSine",
-    duration: 4200,
     direction: "alternate",
     loop: true,
   });

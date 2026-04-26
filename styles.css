@@ -10,12 +10,10 @@
   --ink: #151313;
   --muted: #6e625f;
   --white: #ffffff;
-  --plum: #5f1b77;
   --shadow: 0 18px 44px rgba(34, 22, 18, 0.12);
   --shadow-soft: 0 12px 30px rgba(34, 22, 18, 0.08);
   --radius: 8px;
   --max-width: 1180px;
-  --header-height: 86px;
 }
 
 * {
@@ -41,6 +39,7 @@ body.menu-open {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -61,6 +60,7 @@ textarea {
 }
 
 .section {
+  scroll-margin-top: 110px;
   padding: 96px 0;
 }
 
@@ -73,7 +73,7 @@ textarea {
 }
 
 .section-heading {
-  width: min(680px, 100%);
+  width: min(720px, 100%);
   margin-bottom: 40px;
 }
 
@@ -106,14 +106,14 @@ h2 {
 }
 
 h1 {
-  max-width: 720px;
+  max-width: 760px;
   margin-bottom: 22px;
-  font-size: clamp(4rem, 10vw, 9.5rem);
+  font-size: clamp(3.3rem, 8vw, 7.2rem);
 }
 
 h2 {
   margin-bottom: 18px;
-  font-size: clamp(2.5rem, 5vw, 5.2rem);
+  font-size: clamp(2.35rem, 5vw, 4.8rem);
 }
 
 h3 {
@@ -180,7 +180,7 @@ h3 {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
   width: min(calc(100% - 32px), 1180px);
   min-height: 70px;
   padding: 10px 12px 10px 14px;
@@ -222,9 +222,9 @@ h3 {
 .site-nav {
   display: flex;
   justify-content: center;
-  gap: clamp(12px, 2vw, 26px);
+  gap: clamp(10px, 1.4vw, 20px);
   color: rgba(21, 19, 19, 0.76);
-  font-size: 0.93rem;
+  font-size: 0.9rem;
   font-weight: 800;
 }
 
@@ -250,7 +250,8 @@ h3 {
   transform: scaleX(1);
 }
 
-.whatsapp-link {
+.whatsapp-link,
+.floating-whatsapp {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -265,7 +266,8 @@ h3 {
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.whatsapp-link:hover {
+.whatsapp-link:hover,
+.floating-whatsapp:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 30px rgba(31, 143, 85, 0.28);
 }
@@ -321,8 +323,8 @@ h3 {
   inset: 0;
   z-index: -3;
   background:
-    linear-gradient(90deg, rgba(255, 250, 244, 0.95) 0%, rgba(255, 250, 244, 0.78) 42%, rgba(255, 245, 248, 0.28) 100%),
-    url("assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.08 PM (5).jpeg") center right / cover;
+    linear-gradient(90deg, rgba(255, 250, 244, 0.96) 0%, rgba(255, 250, 244, 0.82) 42%, rgba(255, 245, 248, 0.32) 100%),
+    url("assets/img/optimized/hero-bg.webp") center right / cover;
   content: "";
 }
 
@@ -342,9 +344,9 @@ h3 {
 }
 
 .hero-copy {
-  max-width: 610px;
+  max-width: 640px;
   margin-bottom: 28px;
-  font-size: clamp(1rem, 2vw, 1.22rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .hero-actions {
@@ -441,10 +443,15 @@ h3 {
 }
 
 /* Categories */
-.category-grid {
+.category-grid,
+.product-grid,
+.benefit-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
+}
+
+.category-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .category-card {
@@ -510,7 +517,6 @@ h3 {
 }
 
 .product-grid {
-  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
@@ -519,7 +525,7 @@ h3 {
   overflow: hidden;
   border: 1px solid rgba(200, 168, 90, 0.18);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.86);
   box-shadow: var(--shadow-soft);
   transition: transform 260ms ease, box-shadow 260ms ease;
 }
@@ -590,15 +596,22 @@ h3 {
 }
 
 /* Promotions */
-.promo-layout {
+.promo-layout,
+.about-layout,
+.contact-layout,
+.faq-layout {
   display: grid;
-  grid-template-columns: 0.92fr 1fr;
-  align-items: center;
+  align-items: start;
   gap: 48px;
 }
 
+.promo-layout {
+  grid-template-columns: 0.92fr 1fr;
+  align-items: center;
+}
+
 .promo-copy {
-  max-width: 520px;
+  max-width: 540px;
 }
 
 .promo-stack {
@@ -606,9 +619,11 @@ h3 {
   gap: 16px;
 }
 
-.promo-stack article {
+.promo-stack article,
+.benefit-card,
+.faq-item {
   padding: 26px;
-  border: 1px solid rgba(200, 168, 90, 0.22);
+  border: 1px solid rgba(200, 168, 90, 0.2);
   border-radius: var(--radius);
   background: var(--white);
   box-shadow: var(--shadow-soft);
@@ -624,14 +639,14 @@ h3 {
 }
 
 .promo-stack p,
-.benefit-card p {
+.benefit-card p,
+.faq-item p {
   margin-bottom: 0;
   color: var(--muted);
 }
 
 /* About */
 .about-layout {
-  display: grid;
   grid-template-columns: 0.8fr 1fr;
   align-items: center;
   gap: 58px;
@@ -690,10 +705,6 @@ h3 {
   box-shadow: 0 12px 26px rgba(21, 19, 19, 0.08);
 }
 
-.team-photo::after {
-  display: none;
-}
-
 .team-photo img {
   width: 100%;
   height: 100%;
@@ -732,30 +743,39 @@ h3 {
 
 /* Benefits */
 .benefit-grid {
-  display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
 }
 
 .benefit-card {
   min-height: 240px;
-  padding: 26px;
-  border: 1px solid rgba(200, 168, 90, 0.2);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: var(--shadow-soft);
 }
 
 .benefit-card h3 {
   margin-top: 28px;
 }
 
-/* Contact */
-.contact-layout {
+/* FAQ */
+.faq-layout {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.faq-list {
   display: grid;
+  gap: 14px;
+}
+
+.faq-item h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+/* Contact */
+.contact {
+  background: var(--cream);
+}
+
+.contact-layout {
   grid-template-columns: 0.9fr 1fr;
-  align-items: start;
-  gap: 48px;
 }
 
 .social-links {
@@ -823,6 +843,15 @@ h3 {
   box-shadow: 0 0 0 4px rgba(200, 168, 90, 0.14);
 }
 
+.floating-whatsapp {
+  position: fixed;
+  z-index: 25;
+  right: 18px;
+  bottom: 18px;
+  min-height: 50px;
+  padding-inline: 20px;
+}
+
 /* Footer */
 .site-footer {
   padding: 46px 0 28px;
@@ -870,7 +899,7 @@ h3 {
   will-change: transform, opacity;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1100px) {
   .site-header {
     grid-template-columns: auto auto auto;
   }
@@ -918,8 +947,8 @@ h3 {
 
   .hero::before {
     background:
-      linear-gradient(180deg, rgba(255, 250, 244, 0.98) 0%, rgba(255, 250, 244, 0.74) 58%, rgba(255, 245, 248, 0.5) 100%),
-      url("assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.08 PM (5).jpeg") center / cover;
+      linear-gradient(180deg, rgba(255, 250, 244, 0.98) 0%, rgba(255, 250, 244, 0.76) 58%, rgba(255, 245, 248, 0.52) 100%),
+      url("assets/img/optimized/hero-bg.webp") center / cover;
   }
 
   .hero-media {
@@ -969,7 +998,8 @@ h3 {
 
   .promo-layout,
   .about-layout,
-  .contact-layout {
+  .contact-layout,
+  .faq-layout {
     grid-template-columns: 1fr;
   }
 
@@ -989,15 +1019,12 @@ h3 {
 }
 
 @media (max-width: 720px) {
-  :root {
-    --header-height: 76px;
-  }
-
   .container {
     width: min(100% - 24px, var(--max-width));
   }
 
   .section {
+    scroll-margin-top: 92px;
     padding: 68px 0;
   }
 
@@ -1036,11 +1063,11 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(3.45rem, 18vw, 5.4rem);
+    font-size: clamp(3rem, 15vw, 4.9rem);
   }
 
   h2 {
-    font-size: clamp(2.2rem, 13vw, 3.35rem);
+    font-size: clamp(2.15rem, 12vw, 3.25rem);
   }
 
   .hero-copy {
@@ -1098,6 +1125,7 @@ h3 {
 
   .promo-stack article,
   .benefit-card,
+  .faq-item,
   .contact-form {
     padding: 20px;
   }
@@ -1106,9 +1134,22 @@ h3 {
     min-height: auto;
   }
 
+  .product-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .social-links a {
     flex: 1 1 auto;
     text-align: center;
+  }
+
+  .floating-whatsapp {
+    right: 12px;
+    bottom: 12px;
+    min-height: 46px;
+    padding-inline: 16px;
+    font-size: 0.9rem;
   }
 }
 
