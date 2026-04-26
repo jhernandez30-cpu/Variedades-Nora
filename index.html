@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Variedades Nora es una boutique de bolsos, carteras, mochilas y cangureras con estilo femenino, elegante y moderno."
+    />
+    <meta name="author" content="Variedades Nora" />
+    <meta name="theme-color" content="#f7dce5" />
+
+    <meta property="og:title" content="Variedades Nora | Bolsos, carteras y accesorios" />
+    <meta
+      property="og:description"
+      content="Descubre bolsos, carteras, mochilas y cangureras con encanto boutique en Variedades Nora."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/logo-variedades-nora.png" />
+    <meta property="og:url" content="https://variedades-nora.com/" />
+
+    <title>Variedades Nora | Bolsos, carteras y accesorios boutique</title>
+
+    <link rel="icon" type="image/png" href="assets/img/logo-variedades-nora.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img src="assets/img/logo-variedades-nora.png" alt="Logo Variedades Nora" />
+        <span>Variedades Nora</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Navegación principal" data-nav>
+        <a href="#categorias">Categorías</a>
+        <a href="#destacados">Destacados</a>
+        <a href="#promociones">Promos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="whatsapp-link header-whatsapp" href="#" data-whatsapp>
+        <span class="wa-mark">WA</span>
+        WhatsApp
+      </a>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero section-band" id="inicio">
+        <div class="hero-particles" aria-hidden="true"></div>
+        <div class="hero-media" aria-hidden="true">
+          <img
+            class="hero-photo hero-photo-main"
+            src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.09 PM (4).jpeg"
+            alt=""
+          />
+          <img
+            class="hero-photo hero-photo-side"
+            src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.10 PM.jpeg"
+            alt=""
+          />
+          <img class="hero-logo-mark" src="assets/img/logo-variedades-nora.png" alt="" />
+        </div>
+
+        <div class="container hero-content">
+          <p class="eyebrow">Boutique de accesorios femeninos</p>
+          <h1>Variedades Nora</h1>
+          <p class="hero-copy">
+            Bolsos, carteras, mochilas y cangureras para elevar tu estilo diario con detalles
+            elegantes, prácticos y llenos de encanto.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#destacados">Ver colección</a>
+            <a class="btn btn-soft" href="#" data-whatsapp>Comprar por WhatsApp</a>
+          </div>
+
+          <div class="hero-highlights" aria-label="Detalles de la tienda">
+            <span>Estilo boutique</span>
+            <span>Nuevos ingresos</span>
+            <span>Atención personalizada</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categorías -->
+      <section class="section categories" id="categorias">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Compra por estilo</p>
+            <h2>Categorías favoritas</h2>
+            <p>
+              Encuentra el accesorio perfecto para el trabajo, una salida especial o tu rutina de
+              todos los días.
+            </p>
+          </div>
+
+          <div class="category-grid">
+            <article class="category-card reveal">
+              <img
+                src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.08 PM (4).jpeg"
+                alt="Bolsos elegantes de Variedades Nora"
+              />
+              <div>
+                <span>01</span>
+                <h3>Bolsos</h3>
+                <p>Piezas espaciosas, femeninas y fáciles de combinar.</p>
+              </div>
+            </article>
+
+            <article class="category-card reveal">
+              <img
+                src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.09 PM (2).jpeg"
+                alt="Carteras modernas de Variedades Nora"
+              />
+              <div>
+                <span>02</span>
+                <h3>Carteras</h3>
+                <p>Compactas, lindas y con acabados que se notan.</p>
+              </div>
+            </article>
+
+            <article class="category-card reveal">
+              <img
+                src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.11 PM (2).jpeg"
+                alt="Mochilas femeninas de Variedades Nora"
+              />
+              <div>
+                <span>03</span>
+                <h3>Mochilas</h3>
+                <p>Comodidad con presencia para moverte con libertad.</p>
+              </div>
+            </article>
+
+            <article class="category-card reveal">
+              <img
+                src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.12 PM.jpeg"
+                alt="Cangureras prácticas de Variedades Nora"
+              />
+              <div>
+                <span>04</span>
+                <h3>Cangureras</h3>
+                <p>Livianas, versátiles y perfectas para llevar lo esencial.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Productos destacados -->
+      <section class="section products section-band" id="destacados">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Selección Nora</p>
+            <h2>Productos destacados</h2>
+            <p>Una vitrina moderna para las piezas más buscadas de la boutique.</p>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card reveal">
+              <div class="product-image">
+                <img
+                  src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.08 PM (2).jpeg"
+                  alt="Bolso ejecutivo beige"
+                />
+                <span>Nuevo</span>
+              </div>
+              <div class="product-info">
+                <p>Bolso</p>
+                <h3>Bolso ejecutivo chic</h3>
+                <div class="product-footer">
+                  <strong>Consultar</strong>
+                  <a href="#" data-whatsapp>Lo quiero</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal">
+              <div class="product-image">
+                <img
+                  src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.09 PM (5).jpeg"
+                  alt="Cartera de mano elegante"
+                />
+                <span>Favorito</span>
+              </div>
+              <div class="product-info">
+                <p>Cartera</p>
+                <h3>Cartera de mano elegante</h3>
+                <div class="product-footer">
+                  <strong>Consultar</strong>
+                  <a href="#" data-whatsapp>Lo quiero</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal">
+              <div class="product-image">
+                <img
+                  src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.10 PM (1).jpeg"
+                  alt="Mochila urbana femenina"
+                />
+                <span>Top</span>
+              </div>
+              <div class="product-info">
+                <p>Mochila</p>
+                <h3>Mochila urbana femenina</h3>
+                <div class="product-footer">
+                  <strong>Consultar</strong>
+                  <a href="#" data-whatsapp>Lo quiero</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal">
+              <div class="product-image">
+                <img
+                  src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.11 PM.jpeg"
+                  alt="Cangurera casual moderna"
+                />
+                <span>Práctica</span>
+              </div>
+              <div class="product-info">
+                <p>Cangurera</p>
+                <h3>Cangurera casual moderna</h3>
+                <div class="product-footer">
+                  <strong>Consultar</strong>
+                  <a href="#" data-whatsapp>Lo quiero</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal">
+              <div class="product-image">
+                <img
+                  src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.12 PM (1).jpeg"
+                  alt="Bolso glam de temporada"
+                />
+                <span>Glam</span>
+              </div>
+              <div class="product-info">
+                <p>Bolso</p>
+                <h3>Bolso glam de temporada</h3>
+                <div class="product-footer">
+                  <strong>Consultar</strong>
+                  <a href="#" data-whatsapp>Lo quiero</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal">
+              <div class="product-image">
+                <img
+                  src="assets/img/portfolio/WhatsApp Image 2026-04-26 at 3.38.09 PM.jpeg"
+                  alt="Cartera compacta con textura"
+                />
+                <span>Detalle</span>
+              </div>
+              <div class="product-info">
+                <p>Cartera</p>
+                <h3>Cartera compacta con textura</h3>
+                <div class="product-footer">
+                  <strong>Consultar</strong>
+                  <a href="#" data-whatsapp>Lo quiero</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promociones -->
+      <section class="section promos" id="promociones">
+        <div class="container promo-layout">
+          <div class="promo-copy reveal">
+            <p class="eyebrow">Promociones especiales</p>
+            <h2>Detalles que hacen más linda tu compra</h2>
+            <p>
+              Pregunta por los nuevos ingresos, apartados disponibles y combos ideales para regalo.
+              Cada semana hay opciones frescas para consentirte o sorprender a alguien especial.
+            </p>
+            <a class="btn btn-primary" href="#" data-whatsapp>Preguntar promociones</a>
+          </div>
+
+          <div class="promo-stack reveal" aria-label="Promociones de Variedades Nora">
+            <article>
+              <span>Combo</span>
+              <h3>Bolso + cartera</h3>
+              <p>Arma tu dúo favorito y coordina tu look completo.</p>
+            </article>
+            <article>
+              <span>Regalos</span>
+              <h3>Empaque especial</h3>
+              <p>Opciones listas para cumpleaños, detalles y sorpresas.</p>
+            </article>
+            <article>
+              <span>Apartado</span>
+              <h3>Reserva tu favorito</h3>
+              <p>Consulta disponibilidad y separa la pieza que más te gustó.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre nosotros -->
+      <section class="section about section-band" id="nosotros">
+        <div class="container about-layout">
+          <div class="about-visual reveal">
+            <img src="assets/img/logo-variedades-nora.png" alt="Logo de Variedades Nora" />
+          </div>
+          <div class="about-copy reveal">
+            <p class="eyebrow">Sobre nosotros</p>
+            <h2>Accesorios elegidos con cariño y sentido de estilo</h2>
+            <p>
+              Variedades Nora nace para ofrecer accesorios femeninos con una vibra boutique:
+              piezas útiles, bonitas y versátiles que acompañan tu día sin perder elegancia.
+            </p>
+            <p>
+              Creemos en una compra cercana, clara y amable. Por eso te asesoramos por WhatsApp
+              para ayudarte a elegir colores, tamaños y modelos según tu ocasión.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beneficios -->
+      <section class="section benefits" id="beneficios">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Por qué elegirnos</p>
+            <h2>Comprar en Variedades Nora se siente fácil</h2>
+          </div>
+
+          <div class="benefit-grid">
+            <article class="benefit-card reveal">
+              <span>01</span>
+              <h3>Atención rápida</h3>
+              <p>Resolvemos dudas por WhatsApp para que compres con confianza.</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span>02</span>
+              <h3>Modelos versátiles</h3>
+              <p>Opciones para oficina, salidas, viajes y uso diario.</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span>03</span>
+              <h3>Estética boutique</h3>
+              <p>Selección cuidada con acabados modernos y femeninos.</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span>04</span>
+              <h3>Compra guiada</h3>
+              <p>Te ayudamos a elegir el accesorio ideal según tu estilo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section class="section contact section-band" id="contacto">
+        <div class="container contact-layout">
+          <div class="contact-copy reveal">
+            <p class="eyebrow">Contacto</p>
+            <h2>¿Lista para encontrar tu próximo accesorio?</h2>
+            <p>
+              Escríbenos y te compartimos disponibilidad, fotos, colores y opciones para apartar.
+            </p>
+            <a class="btn btn-primary" href="#" data-whatsapp>Enviar mensaje por WhatsApp</a>
+
+            <div class="social-links" aria-label="Redes sociales">
+              <a href="https://www.facebook.com/share/1Az3mAWps9/" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" data-contact-form>
+            <label>
+              Nombre
+              <input type="text" name="name" placeholder="Tu nombre" required />
+            </label>
+            <label>
+              Producto de interés
+              <select name="category" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Bolsos">Bolsos</option>
+                <option value="Carteras">Carteras</option>
+                <option value="Mochilas">Mochilas</option>
+                <option value="Cangureras">Cangureras</option>
+              </select>
+            </label>
+            <label>
+              Mensaje
+              <textarea name="message" rows="4" placeholder="Cuéntanos qué estás buscando"></textarea>
+            </label>
+            <button class="btn btn-dark" type="submit">Enviar consulta</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-layout">
+        <a class="footer-brand" href="#inicio">
+          <img src="assets/img/logo-variedades-nora.png" alt="Logo Variedades Nora" />
+          <span>Variedades Nora</span>
+        </a>
+        <p>Bolsos, carteras, mochilas y cangureras con estilo boutique.</p>
+        <div class="footer-links">
+          <a href="#categorias">Categorías</a>
+          <a href="#destacados">Destacados</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Variedades Nora. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
