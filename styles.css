@@ -654,6 +654,82 @@ h3 {
   filter: drop-shadow(0 24px 34px rgba(95, 27, 119, 0.18));
 }
 
+/* Team */
+.team {
+  background:
+    linear-gradient(180deg, rgba(255, 250, 244, 0.86), rgba(255, 245, 248, 0.92)),
+    var(--cream);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.team-card {
+  overflow: hidden;
+  border: 1px solid rgba(200, 168, 90, 0.2);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+
+.team-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--rose-100);
+}
+
+.team-photo::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  background: linear-gradient(0deg, rgba(21, 19, 19, 0.3), rgba(21, 19, 19, 0));
+  content: "";
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 450ms ease;
+}
+
+.team-card:hover .team-photo img {
+  transform: scale(1.04);
+}
+
+.team-info {
+  padding: 22px;
+}
+
+.team-info span {
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.team-info h3 {
+  margin: 10px 0 8px;
+  font-size: 1.24rem;
+}
+
+.team-info p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 /* Benefits */
 .benefit-grid {
   display: grid;
@@ -881,6 +957,11 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
   .promo-layout,
   .about-layout,
   .contact-layout {
@@ -992,6 +1073,7 @@ h3 {
 
   .category-grid,
   .product-grid,
+  .team-grid,
   .benefit-grid {
     grid-template-columns: 1fr;
   }

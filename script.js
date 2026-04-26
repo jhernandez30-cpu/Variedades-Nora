@@ -119,7 +119,7 @@ function runGSAPAnimations() {
     });
   });
 
-  gsap.utils.toArray(".category-card, .product-card, .benefit-card").forEach((card) => {
+  gsap.utils.toArray(".category-card, .product-card, .team-card, .benefit-card").forEach((card) => {
     gsap.to(card, {
       scrollTrigger: {
         trigger: card,
