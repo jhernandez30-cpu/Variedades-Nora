@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { passive: true }
   );
+  updateHeader();
 
   contactForm?.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -74,16 +75,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (reduceMotion) {
     document.querySelectorAll(".reveal").forEach((element) => {
-      element.style.opacity = "1";
-      element.style.transform = "none";
+      element.classList.add("is-visible");
     });
+    document.body.classList.add("is-ready");
     return;
   }
 
   createParticles();
-  runGSAPAnimations();
-  runAnimeDetails();
+  revealOnScroll();
+  window.requestAnimationFrame(() => document.body.classList.add("is-ready"));
 });
+
+function revealOnScroll() {
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if (!("IntersectionObserver" in window)) {
+    revealElements.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -12% 0px", threshold: 0.08 }
+  );
+
+  revealElements.forEach((element) => observer.observe(element));
+}
 
 function createParticles() {
   const particleLayer = document.querySelector(".hero-particles");
@@ -91,72 +115,15 @@ function createParticles() {
 
   for (let index = 0; index < 12; index += 1) {
     const particle = document.createElement("span");
-    particle.className = index % 3 === 0 ? "decor-dot" : "particle";
+    const isDot = index % 3 === 0;
+    particle.className = isDot ? "decor-dot" : "particle";
     particle.style.left = `${8 + Math.random() * 84}%`;
     particle.style.top = `${18 + Math.random() * 68}%`;
     particle.style.opacity = `${0.3 + Math.random() * 0.38}`;
+    particle.style.setProperty("--float-x", `${Math.round(Math.random() * 24 - 12)}px`);
+    particle.style.setProperty("--float-y", `${Math.round(Math.random() * 32 - 16)}px`);
+    particle.style.animationDelay = `${index * 130}ms`;
+    particle.style.animationDuration = `${2800 + Math.random() * 1800}ms`;
     particleLayer.appendChild(particle);
   }
-}
-
-function runGSAPAnimations() {
-  if (!window.gsap || !window.ScrollTrigger) return;
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  const heroTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-  heroTimeline
-    .from(".site-header", { y: -24, opacity: 0, duration: 0.7 })
-    .from(".hero .eyebrow", { y: 16, opacity: 0, duration: 0.45 }, "-=0.25")
-    .from(".hero h1", { y: 28, opacity: 0, duration: 0.7 }, "-=0.2")
-    .from(".hero-copy", { y: 22, opacity: 0, duration: 0.55 }, "-=0.3")
-    .from(".hero-actions .btn", { y: 18, opacity: 0, stagger: 0.07, duration: 0.45 }, "-=0.24")
-    .from(".hero-highlights span", { y: 14, opacity: 0, stagger: 0.06, duration: 0.38 }, "-=0.18")
-    .from(
-      ".hero-photo, .hero-logo-mark",
-      { y: 34, opacity: 0, rotate: 1.5, stagger: 0.07, duration: 0.65 },
-      "-=0.55"
-    );
-
-  gsap.utils.toArray(".reveal").forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 84%",
-        toggleActions: "play none none reverse",
-      },
-      y: 28,
-      opacity: 0,
-      duration: 0.62,
-      ease: "power3.out",
-    });
-  });
-}
-
-function runAnimeDetails() {
-  if (!window.anime) return;
-
-  anime({
-    targets: ".particle",
-    translateY: () => anime.random(-18, 18),
-    translateX: () => anime.random(-12, 12),
-    scale: () => anime.random(8, 13) / 10,
-    easing: "easeInOutSine",
-    duration: () => anime.random(2800, 4600),
-    delay: anime.stagger(130),
-    direction: "alternate",
-    loop: true,
-  });
-
-  anime({
-    targets: ".decor-dot",
-    translateY: () => anime.random(-14, 14),
-    opacity: [0.2, 0.62],
-    easing: "easeInOutQuad",
-    duration: 3400,
-    delay: anime.stagger(180),
-    direction: "alternate",
-    loop: true,
-  });
 }
