@@ -395,13 +395,13 @@ h3 {
 .hero-media {
   position: absolute;
   right: max(24px, calc((100vw - var(--max-width)) / 2));
-  bottom: 34px;
+  bottom: 22px;
   z-index: 1;
-  width: min(42vw, 520px);
-  min-width: 330px;
-  height: 560px;
+  width: min(46vw, 610px);
+  min-width: 430px;
+  height: 590px;
   pointer-events: none;
-  transform: translateY(-78px);
+  transform: translateY(-54px);
 }
 
 .hero-photo {
@@ -413,24 +413,35 @@ h3 {
 }
 
 .hero-photo-main {
-  right: 34px;
-  bottom: 42px;
-  width: 72%;
-  height: 340px;
+  right: 0;
+  bottom: 36px;
+  z-index: 2;
+  width: 66%;
+  height: 330px;
 }
 
 .hero-photo-side {
-  right: 0;
-  bottom: 300px;
-  width: 48%;
-  height: 200px;
+  left: 0;
+  bottom: 164px;
+  z-index: 1;
+  width: 64%;
+  height: 315px;
+}
+
+.hero-photo-center {
+  left: 32%;
+  bottom: 318px;
+  z-index: 3;
+  width: 40%;
+  height: 185px;
 }
 
 .hero-logo-mark {
   position: absolute;
-  right: 48%;
-  bottom: 18px;
-  width: min(48%, 250px);
+  left: 4%;
+  bottom: 2px;
+  z-index: 4;
+  width: min(36%, 210px);
   filter: drop-shadow(0 18px 26px rgba(95, 27, 119, 0.18));
 }
 
@@ -1289,25 +1300,36 @@ body.is-ready .reveal.is-visible {
     bottom: 22px;
     width: min(86vw, 500px);
     min-width: 0;
-    height: 370px;
+    height: 390px;
     transform: translateX(50%);
   }
 
   .hero-photo-main {
-    right: 12%;
-    bottom: 26px;
-    height: 250px;
+    right: 4%;
+    bottom: 22px;
+    width: 66%;
+    height: 240px;
   }
 
   .hero-photo-side {
-    right: 0;
-    bottom: 222px;
-    height: 138px;
+    right: auto;
+    left: 0;
+    bottom: 96px;
+    width: 63%;
+    height: 230px;
+  }
+
+  .hero-photo-center {
+    left: 30%;
+    bottom: 245px;
+    width: 42%;
+    height: 130px;
   }
 
   .hero-logo-mark {
-    right: 52%;
-    width: min(38%, 180px);
+    right: auto;
+    left: 4%;
+    width: min(34%, 160px);
   }
 
   .category-grid,
@@ -1422,7 +1444,7 @@ body.is-ready .reveal.is-visible {
   }
 
   .hero-media {
-    height: 320px;
+    height: 330px;
   }
 
   .hero-photo {
@@ -1430,14 +1452,27 @@ body.is-ready .reveal.is-visible {
   }
 
   .hero-photo-main {
-    width: 78%;
-    height: 220px;
+    right: 2%;
+    bottom: 18px;
+    width: 70%;
+    height: 205px;
   }
 
   .hero-photo-side {
-    width: 46%;
-    height: 118px;
-    bottom: 202px;
+    bottom: 86px;
+    width: 62%;
+    height: 180px;
+  }
+
+  .hero-photo-center {
+    left: 30%;
+    bottom: 208px;
+    width: 42%;
+    height: 108px;
+  }
+
+  .hero-logo-mark {
+    width: min(34%, 140px);
   }
 
   .category-grid,
