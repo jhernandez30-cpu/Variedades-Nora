@@ -378,9 +378,11 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  max-width: 760px;
 }
 
 .hero-highlights span {
+  flex: 0 1 auto;
   padding: 9px 14px;
   border: 1px solid rgba(200, 168, 90, 0.32);
   border-radius: 999px;
