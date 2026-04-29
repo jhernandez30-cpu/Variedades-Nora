@@ -400,6 +400,7 @@ h3 {
   min-width: 330px;
   height: 560px;
   pointer-events: none;
+  transform: translateY(-80px);
 }
 
 .hero-photo {
@@ -419,7 +420,7 @@ h3 {
 
 .hero-photo-side {
   right: 0;
-  bottom: 300px;
+  bottom: 240px;
   width: 48%;
   height: 200px;
 }
