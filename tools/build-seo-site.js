@@ -6,6 +6,8 @@ const BASE_URL = "https://jhernandez30-cpu.github.io/Variedades-Nora/";
 const PHONE = "50582299406";
 const DISPLAY_PHONE = "+505 8229 9406";
 const ADDRESS = "Semaforo 1 de Mayo, 7 cuadras al lago, Americas #1 Sector D, casa 1547";
+const GOOGLE_BUSINESS_URL = "https://share.google/BwcHptNaixBM4b5Sg";
+const GOOGLE_REVIEW_URL = "https://g.page/r/CXvv5OQDFuF4EBM/review";
 const LASTMOD = "2026-04-30";
 
 const writeFile = (relativePath, content) => {
@@ -1580,6 +1582,7 @@ function legalPage(page) {
         <div><h2>Categorias</h2>${categories.map((category) => `<a href="${link(prefix, category.slug)}">${category.name}</a>`).join("")}</div>
         <div><h2>Productos</h2>${products.map((product) => `<a href="${link(prefix, `productos/${product.slug}/`)}">${product.name}</a>`).join("")}</div>
         <div><h2>Blog y politicas</h2>${blogPosts.map((post) => `<a href="${link(prefix, post.slug)}">${post.title}</a>`).join("")}${legalPages.filter((item) => item.slug !== page.slug).map((item) => `<a href="${link(prefix, item.slug)}">${item.h1}</a>`).join("")}</div>
+        <div><h2>Google</h2><a href="${GOOGLE_BUSINESS_URL}" target="_blank" rel="noopener">Ver ubicacion en Google</a><a href="${GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Valorar Variedades Nora en Google</a></div>
       </div>`
     : "";
   return `<!DOCTYPE html>
@@ -1630,6 +1633,8 @@ Variedades Nora es una tienda online en Nicaragua de bolsos, carteras, mochilas,
 Compra principal: por WhatsApp en ${wa("Hola, Variedades Nora. Quiero consultar productos disponibles.")}
 Telefono: ${DISPLAY_PHONE}
 Ubicacion: ${ADDRESS}, Nicaragua.
+Ficha de Google: ${GOOGLE_BUSINESS_URL}
+Valorar en Google: ${GOOGLE_REVIEW_URL}
 
 Paginas comerciales principales:
 - ${BASE_URL}bolsos/ - Bolsos en Nicaragua
