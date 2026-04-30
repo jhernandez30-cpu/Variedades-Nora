@@ -1,6 +1,6 @@
 # Variedades Nora
 
-Variedades Nora es una tienda online en Nicaragua de bolsos, carteras, mochilas, cangureras, perfumes, ropa, accesorios de moda, ofertas, nuevos ingresos y regalos para mujer.
+Variedades Nora es una tienda online en Nicaragua de bolsos, carteras, mochilas, cangureras, cosmeticos, maquillaje, cremas, productos para cabello, perfumes, ropa, accesorios de moda, ofertas, nuevos ingresos y regalos para mujer.
 
 Compra principal: por WhatsApp en https://wa.me/50582299406?text=Hola%2C%20Variedades%20Nora.%20Quiero%20consultar%20productos%20disponibles.
 Telefono: +505 8229 9406
@@ -15,6 +15,7 @@ Paginas comerciales principales:
 - https://jhernandez30-cpu.github.io/Variedades-Nora/mochilas/ - Mochilas escolares y casuales
 - https://jhernandez30-cpu.github.io/Variedades-Nora/cangureras/ - Cangureras modernas
 - https://jhernandez30-cpu.github.io/Variedades-Nora/perfumes/ - Perfumes para mujer
+- https://jhernandez30-cpu.github.io/Variedades-Nora/cosmeticos/ - Cosmeticos, maquillaje, cremas y cabello
 - https://jhernandez30-cpu.github.io/Variedades-Nora/ropa/ - Ropa para mujer
 - https://jhernandez30-cpu.github.io/Variedades-Nora/accesorios/ - Accesorios de moda
 - https://jhernandez30-cpu.github.io/Variedades-Nora/ofertas/ - Ofertas

@@ -188,6 +188,62 @@ const allGridProducts = [
     reviews: "5",
   },
   {
+    slug: "maquillaje-basico-para-mujer",
+    name: "Maquillaje basico para mujer",
+    category: "Cosmeticos",
+    categorySlug: "cosmeticos/maquillaje/",
+    badge: "Maquillaje",
+    image: "assets/img/portfolio/Cosmetico/Maquillaje/623431721_1476461294481435_7546205528314610255_n.jpg",
+    price: "350.00",
+    shortPrice: "Desde C$350",
+    description: "Producto de maquillaje para uso diario, retoques rapidos y regalos practicos.",
+    status: "Consultar disponibilidad",
+    rating: "4.7",
+    reviews: "8",
+  },
+  {
+    slug: "maquillaje-coreano-variedades-nora",
+    name: "Maquillaje coreano Variedades Nora",
+    category: "Cosmeticos",
+    categorySlug: "cosmeticos/maquillaje-coreano/",
+    badge: "Nuevo",
+    image: "assets/img/portfolio/Cosmetico/Maquillaje Correano/623408932_1475356677925230_7379679527955244234_n.jpg",
+    price: "420.00",
+    shortPrice: "Desde C$420",
+    description: "Maquillaje coreano para renovar tus basicos de belleza y cuidado personal.",
+    status: "Nuevo ingreso",
+    rating: "4.8",
+    reviews: "9",
+  },
+  {
+    slug: "crema-cuidado-personal",
+    name: "Crema de cuidado personal",
+    category: "Cosmeticos",
+    categorySlug: "cosmeticos/cremas/",
+    badge: "Cuidado",
+    image: "assets/img/portfolio/Cosmetico/Cremas/623415827_1475484354579129_8458282017946347412_n.jpg",
+    price: "300.00",
+    shortPrice: "Desde C$300",
+    description: "Crema de cuidado personal para completar tu rutina diaria o regalar.",
+    status: "Consultar disponibilidad",
+    rating: "4.7",
+    reviews: "7",
+  },
+  {
+    slug: "producto-para-cabello",
+    name: "Producto para cabello",
+    category: "Cosmeticos",
+    categorySlug: "cosmeticos/cabello/",
+    badge: "Cabello",
+    image: "assets/img/portfolio/Cosmetico/Cabello/623531292_1475397751254456_8324213922419272095_n.jpg",
+    price: "280.00",
+    shortPrice: "Desde C$280",
+    description: "Producto para cabello disponible en el catalogo de cosmeticos de Variedades Nora.",
+    status: "Consultar por WhatsApp",
+    rating: "4.6",
+    reviews: "5",
+  },
+  {
     slug: "blusa-casual-para-mujer",
     name: "Blusa casual para mujer",
     category: "Ropa",
@@ -446,6 +502,63 @@ const categories = [
     productSlugs: ["perfume-para-mujer-regalo", "cartera-moderna-casual", "accesorios-de-moda-para-regalo"],
   },
   {
+    slug: "cosmeticos/",
+    name: "Cosmeticos",
+    h1: "Cosmeticos en Nicaragua",
+    title: "Cosmeticos en Nicaragua | Variedades Nora",
+    meta: "Compra cosmeticos, maquillaje, cremas y productos para cabello en Nicaragua con consulta directa por WhatsApp.",
+    image: "assets/img/portfolio/Cosmetico/Maquillaje/623431721_1476461294481435_7546205528314610255_n.jpg",
+    keyword: "cosmeticos en Nicaragua",
+    intro:
+      "En Variedades Nora tambien encuentras cosmeticos en Nicaragua para completar tu rutina diaria, renovar tus basicos de belleza o elegir un detalle practico para regalo. Esta categoria agrupa maquillaje, maquillaje coreano, cremas y productos para cabello disponibles en el portafolio de la tienda. Puedes revisar fotos reales, comparar opciones por uso, tipo de producto y disponibilidad, y escribir por WhatsApp para confirmar precio, modelo y entrega. La seleccion de cosmeticos se integra con el resto del catalogo de moda y accesorios para que puedas combinar compras de bolsos, carteras, perfumes, ropa y productos de belleza en una misma consulta personalizada.",
+    subcategories: ["cosmeticos/maquillaje/", "cosmeticos/maquillaje-coreano/", "cosmeticos/cremas/", "cosmeticos/cabello/"],
+    productSlugs: ["maquillaje-basico-para-mujer", "maquillaje-coreano-variedades-nora", "crema-cuidado-personal"],
+  },
+  {
+    slug: "cosmeticos/maquillaje/",
+    name: "Maquillaje",
+    h1: "Maquillaje en Nicaragua",
+    title: "Maquillaje en Nicaragua | Variedades Nora",
+    meta: "Maquillaje para mujer, basicos de belleza y productos para uso diario. Consulta disponibilidad por WhatsApp.",
+    image: "assets/img/portfolio/Cosmetico/Maquillaje/623431721_1476461294481435_7546205528314610255_n.jpg",
+    keyword: "maquillaje en Nicaragua",
+    parent: "cosmeticos/",
+    productSlugs: ["maquillaje-basico-para-mujer", "maquillaje-coreano-variedades-nora", "crema-cuidado-personal"],
+  },
+  {
+    slug: "cosmeticos/maquillaje-coreano/",
+    name: "Maquillaje coreano",
+    h1: "Maquillaje coreano en Nicaragua",
+    title: "Maquillaje Coreano en Nicaragua | Variedades Nora",
+    meta: "Maquillaje coreano, productos de belleza y nuevos ingresos disponibles en Variedades Nora.",
+    image: "assets/img/portfolio/Cosmetico/Maquillaje Correano/623408932_1475356677925230_7379679527955244234_n.jpg",
+    keyword: "maquillaje coreano en Nicaragua",
+    parent: "cosmeticos/",
+    productSlugs: ["maquillaje-coreano-variedades-nora", "maquillaje-basico-para-mujer", "producto-para-cabello"],
+  },
+  {
+    slug: "cosmeticos/cremas/",
+    name: "Cremas",
+    h1: "Cremas y cuidado personal",
+    title: "Cremas y Cuidado Personal | Variedades Nora",
+    meta: "Cremas y productos de cuidado personal disponibles en el catalogo de cosmeticos de Variedades Nora.",
+    image: "assets/img/portfolio/Cosmetico/Cremas/623415827_1475484354579129_8458282017946347412_n.jpg",
+    keyword: "cremas de cuidado personal",
+    parent: "cosmeticos/",
+    productSlugs: ["crema-cuidado-personal", "maquillaje-basico-para-mujer", "perfume-para-mujer-regalo"],
+  },
+  {
+    slug: "cosmeticos/cabello/",
+    name: "Cabello",
+    h1: "Productos para cabello",
+    title: "Productos para Cabello | Variedades Nora",
+    meta: "Productos para cabello disponibles en Variedades Nora. Consulta precio y disponibilidad por WhatsApp.",
+    image: "assets/img/portfolio/Cosmetico/Cabello/623531292_1475397751254456_8324213922419272095_n.jpg",
+    keyword: "productos para cabello",
+    parent: "cosmeticos/",
+    productSlugs: ["producto-para-cabello", "crema-cuidado-personal", "maquillaje-coreano-variedades-nora"],
+  },
+  {
     slug: "ropa/",
     name: "Ropa",
     h1: "Ropa para mujer en Nicaragua",
@@ -553,6 +666,7 @@ const relatedCategories = [
   "mochilas/",
   "cangureras/",
   "perfumes/",
+  "cosmeticos/",
   "ropa/",
   "accesorios/",
   "ofertas/",
@@ -602,6 +716,14 @@ const blogPosts = [
     summary: "Como elegir perfumes y detalles para cumpleanos, sorpresas y ocasiones especiales.",
   },
   {
+    slug: "blog/que-cosmeticos-comprar-para-uso-diario/",
+    title: "Que cosmeticos comprar para uso diario",
+    keyword: "cosmeticos para uso diario",
+    categorySlug: "cosmeticos/",
+    cta: "Ver cosmeticos",
+    summary: "Ideas para elegir maquillaje, cremas y productos para cabello segun tu rutina.",
+  },
+  {
     slug: "blog/como-combinar-accesorios-de-moda/",
     title: "Como combinar accesorios de moda",
     keyword: "como combinar accesorios de moda",
@@ -624,9 +746,9 @@ const legalPages = [
     slug: "sobre-nosotros/",
     title: "Sobre Nosotros | Variedades Nora",
     h1: "Sobre Variedades Nora",
-    meta: "Conoce Variedades Nora, tienda online de bolsos, carteras, mochilas, perfumes, ropa y accesorios en Nicaragua.",
+    meta: "Conoce Variedades Nora, tienda online de bolsos, carteras, mochilas, cosmeticos, perfumes, ropa y accesorios en Nicaragua.",
     body: [
-      "Variedades Nora es una tienda online en Nicaragua enfocada en productos de moda, accesorios y detalles utiles para mujer y publico general.",
+      "Variedades Nora es una tienda online en Nicaragua enfocada en productos de moda, cosmeticos, accesorios y detalles utiles para mujer y publico general.",
       "Nuestra prioridad es ofrecer una compra cercana, clara y practica: puedes explorar categorias, revisar productos destacados y escribir por WhatsApp para confirmar precio, color, foto y disponibilidad.",
       "Trabajamos con nuevos ingresos, opciones para regalo, productos de uso diario y una seleccion pensada para combinar estilo, funcionalidad y precios accesibles.",
     ],
@@ -639,7 +761,7 @@ const legalPages = [
     body: [
       `WhatsApp: ${DISPLAY_PHONE}.`,
       `Ubicacion: ${ADDRESS}, Nicaragua.`,
-      "Atendemos consultas sobre bolsos, carteras, mochilas, cangureras, perfumes, ropa, accesorios, ofertas y nuevos ingresos.",
+      "Atendemos consultas sobre bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa, accesorios, ofertas y nuevos ingresos.",
     ],
   },
   {
@@ -707,7 +829,7 @@ function head({ title, description, canonical, prefix, schema, type = "website" 
     <meta name="author" content="Variedades Nora" />
     <meta name="theme-color" content="#f7dce5" />
     <meta name="description" content="${description}" />
-    <meta name="keywords" content="Variedades Nora, tienda online en Nicaragua, bolsos en Nicaragua, carteras en Nicaragua, mochilas en Nicaragua, cangureras modernas, perfumes para mujer, ropa para mujer, accesorios de moda, regalos para mujer" />
+    <meta name="keywords" content="Variedades Nora, tienda online en Nicaragua, bolsos en Nicaragua, carteras en Nicaragua, mochilas en Nicaragua, cangureras modernas, cosmeticos en Nicaragua, maquillaje en Nicaragua, perfumes para mujer, ropa para mujer, accesorios de moda, regalos para mujer" />
     <title>${title}</title>
     <link rel="canonical" href="${canonical}" />
     <link rel="icon" type="image/png" href="${link(prefix, "assets/img/logo-variedades-nora.png")}" />
@@ -750,6 +872,7 @@ function header(prefix) {
         <a href="${link(prefix, "bolsos/")}">Bolsos</a>
         <a href="${link(prefix, "carteras/")}">Carteras</a>
         <a href="${link(prefix, "mochilas/")}">Mochilas</a>
+        <a href="${link(prefix, "cosmeticos/")}">Cosmeticos</a>
         <a href="${link(prefix, "ofertas/")}">Ofertas</a>
         <a href="${link(prefix, "blog/")}">Blog</a>
         <a href="${homeAnchor(prefix, "contacto")}">Contacto</a>
@@ -838,7 +961,7 @@ function productCard(product, prefix, { detail = true } = {}) {
 function relatedGrid(prefix, currentSlug = "") {
   return relatedCategories
     .filter((slug) => slug !== currentSlug)
-    .slice(0, 10)
+    .slice(0, 12)
     .map((slug) => {
       const category = categoryBySlug.get(slug);
       return `<a class="related-card reveal" href="${link(prefix, slug)}">
@@ -851,7 +974,7 @@ function relatedGrid(prefix, currentSlug = "") {
 
 function filtersHtml() {
   const groups = [
-    ["Categoria", ["Bolsos", "Carteras", "Mochilas", "Cangureras", "Perfumes", "Ropa", "Accesorios"]],
+    ["Categoria", ["Bolsos", "Carteras", "Mochilas", "Cangureras", "Perfumes", "Cosmeticos", "Ropa", "Accesorios"]],
     ["Material", ["Cuero sintetico", "Tela", "Lona", "Poliester"]],
     ["Color", ["Negro", "Cafe", "Rosado", "Blanco", "Beige", "Rojo", "Azul"]],
     ["Precio", ["C$0-C$500", "C$500-C$1,000", "C$1,000+"]],
@@ -921,7 +1044,7 @@ function seoBlocks(keyword) {
         </article>
         <article class="seo-block reveal">
           <h2>Tienda online de variedades, moda y accesorios en Nicaragua</h2>
-          <p>Variedades Nora organiza su catalogo por categorias claras para que Google, clientes y sistemas de IA entiendan que vende: bolsos, carteras, mochilas, cangureras, perfumes, ropa, accesorios, ofertas y nuevos ingresos.</p>
+          <p>Variedades Nora organiza su catalogo por categorias claras para que Google, clientes y sistemas de IA entiendan que vende: bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa, accesorios, ofertas y nuevos ingresos.</p>
         </article>
         <article class="seo-block reveal">
           <h2>Productos para regalo, uso diario y estilo personal</h2>
@@ -937,7 +1060,7 @@ function seoBlocks(keyword) {
 
 function faqSection() {
   const faqs = [
-    ["¿Que productos vende Variedades Nora?", "Variedades Nora vende bolsos, carteras, mochilas, cangureras, perfumes, ropa, accesorios, ofertas y nuevos ingresos."],
+    ["¿Que productos vende Variedades Nora?", "Variedades Nora vende bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa, accesorios, ofertas y nuevos ingresos."],
     ["¿Como puedo comprar?", "Puedes elegir un producto o categoria y escribir por WhatsApp para confirmar precio, color, disponibilidad y entrega."],
     ["¿Atienden en Nicaragua?", "Si. Variedades Nora atiende consultas y compras en Nicaragua."],
     ["¿Los precios y modelos son fijos?", "La disponibilidad puede cambiar, por eso cada producto se confirma por WhatsApp antes de comprar."],
@@ -960,7 +1083,7 @@ function baseOrganizationSchema() {
     name: "Variedades Nora",
     url: BASE_URL,
     logo: `${BASE_URL}assets/img/logo-variedades-nora.png`,
-    description: "Tienda online nicaraguense de bolsos, carteras, mochilas, cangureras, perfumes, ropa y accesorios de moda.",
+    description: "Tienda online nicaraguense de bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa y accesorios de moda.",
     sameAs: ["https://www.facebook.com/share/1Az3mAWps9/"],
     contactPoint: {
       "@type": "ContactPoint",
@@ -988,7 +1111,7 @@ function storeSchema() {
     },
     areaServed: { "@type": "Country", name: "Nicaragua" },
     acceptedPaymentMethod: ["Efectivo", "Transferencia bancaria", "Pago coordinado por WhatsApp"],
-    knowsAbout: ["bolsos para mujer", "carteras modernas", "mochilas escolares", "cangureras modernas", "perfumes para mujer", "ropa para mujer", "accesorios de moda", "regalos para mujer"],
+    knowsAbout: ["bolsos para mujer", "carteras modernas", "mochilas escolares", "cangureras modernas", "cosmeticos", "maquillaje", "maquillaje coreano", "cremas", "productos para cabello", "perfumes para mujer", "ropa para mujer", "accesorios de moda", "regalos para mujer"],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.8",
@@ -1047,7 +1170,7 @@ function faqSchema() {
       {
         "@type": "Question",
         name: "¿Que productos vende Variedades Nora?",
-        acceptedAnswer: { "@type": "Answer", text: "Variedades Nora vende bolsos, carteras, mochilas, cangureras, perfumes, ropa, accesorios de moda, ofertas y nuevos ingresos." },
+        acceptedAnswer: { "@type": "Answer", text: "Variedades Nora vende bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa, accesorios de moda, ofertas y nuevos ingresos." },
       },
       {
         "@type": "Question",
@@ -1084,7 +1207,7 @@ function homePage() {
         "@id": `${BASE_URL}#webpage`,
         url: BASE_URL,
         name: "Tienda Online de Variedades en Nicaragua | Variedades Nora",
-        description: "Compra bolsos, carteras, mochilas, cangureras, perfumes, ropa y accesorios en Nicaragua con atencion por WhatsApp.",
+        description: "Compra bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa y accesorios en Nicaragua con atencion por WhatsApp.",
         isPartOf: { "@id": `${BASE_URL}#website` },
         about: { "@id": `${BASE_URL}#store` },
         primaryImageOfPage: { "@type": "ImageObject", url: `${BASE_URL}assets/img/optimized/hero-main.webp` },
@@ -1111,8 +1234,8 @@ function homePage() {
   };
 
   const categoryCards = relatedCategories
-    .filter((slug) => !slug.includes("/") || ["ofertas/", "nuevos-ingresos/"].includes(slug))
-    .slice(0, 9)
+    .filter((slug) => slug.split("/").filter(Boolean).length === 1)
+      .slice(0, 10)
     .map((slug, index) => {
       const category = categoryBySlug.get(slug);
       return `<a class="category-card reveal" href="${category.slug}">
@@ -1127,7 +1250,7 @@ function homePage() {
   <head>
 ${head({
   title: "Tienda Online de Variedades en Nicaragua | Variedades Nora",
-  description: "Compra bolsos, carteras, mochilas, cangureras, perfumes, ropa y accesorios en Nicaragua con atencion por WhatsApp.",
+  description: "Compra bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa y accesorios en Nicaragua con atencion por WhatsApp.",
   canonical: BASE_URL,
   prefix,
   schema,
@@ -1145,8 +1268,8 @@ ${head({
         </div>
         <div class="container hero-content">
           <p class="eyebrow">Tienda online de variedades en Nicaragua</p>
-          <h1>Bolsos, carteras, mochilas, perfumes, ropa y accesorios en Nicaragua</h1>
-          <p class="hero-copy">Variedades Nora es una tienda online de moda y accesorios en Nicaragua. Encuentra bolsos para mujer, carteras modernas, mochilas, cangureras, perfumes, ropa casual, regalos y nuevos ingresos con compra rapida por WhatsApp.</p>
+          <h1>Bolsos, carteras, mochilas, cosmeticos, perfumes, ropa y accesorios en Nicaragua</h1>
+          <p class="hero-copy">Variedades Nora es una tienda online de moda, cosmeticos y accesorios en Nicaragua. Encuentra bolsos para mujer, carteras modernas, mochilas, cangureras, maquillaje, cremas, perfumes, ropa casual, regalos y nuevos ingresos con compra rapida por WhatsApp.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#catalogo">Ver catalogo</a>
             <a class="btn btn-soft" href="${wa("Hola, Variedades Nora. Quiero ver el catalogo y consultar disponibilidad.")}" data-whatsapp>Comprar por WhatsApp</a>
@@ -1188,7 +1311,7 @@ ${head({
           <div class="section-heading reveal">
             <p class="eyebrow">Todos los productos</p>
             <h2>Catalogo de moda, accesorios y regalos</h2>
-            <p>Explora bolsos de mano, bolsos cruzados, carteras elegantes, mochilas casuales, mochilas escolares, cangureras modernas, perfumes, ropa casual, accesorios, ofertas y nuevos ingresos.</p>
+            <p>Explora bolsos de mano, bolsos cruzados, carteras elegantes, mochilas casuales, mochilas escolares, cangureras modernas, cosmeticos, maquillaje, cremas, perfumes, ropa casual, accesorios, ofertas y nuevos ingresos.</p>
           </div>
           <div class="shop-layout">
             ${filtersHtml()}
@@ -1238,7 +1361,7 @@ ${head({
               <li><strong>Direccion:</strong> ${ADDRESS}</li>
               <li><strong>Horario:</strong> 24/7 de lunes a domingo</li>
               <li><strong>Area de atencion:</strong> Nicaragua</li>
-              <li><strong>Productos:</strong> bolsos, carteras, mochilas, cangureras, perfumes, ropa y accesorios</li>
+              <li><strong>Productos:</strong> bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa y accesorios</li>
             </ul>
           </div>
           <form class="contact-form reveal" data-contact-form>
@@ -1251,6 +1374,7 @@ ${head({
                 <option value="Mochilas">Mochilas</option>
                 <option value="Cangureras">Cangureras</option>
                 <option value="Perfumes">Perfumes</option>
+                <option value="Cosmeticos">Cosmeticos</option>
                 <option value="Ropa">Ropa</option>
                 <option value="Accesorios">Accesorios</option>
                 <option value="Ofertas">Ofertas</option>
@@ -1477,14 +1601,14 @@ function blogIndex() {
         "@id": `${canonical}#blog`,
         name: "Blog de Variedades Nora",
         url: canonical,
-        description: "Guias de compra sobre bolsos, carteras, mochilas, perfumes, accesorios y regalos.",
+        description: "Guias de compra sobre bolsos, carteras, mochilas, cosmeticos, perfumes, accesorios y regalos.",
       },
     ],
   };
   return `<!DOCTYPE html>
 <html lang="es">
   <head>
-${head({ title: "Blog SEO Ecommerce | Variedades Nora", description: "Guias para elegir bolsos, carteras, mochilas, perfumes, accesorios y regalos en Variedades Nora.", canonical, prefix, schema })}
+${head({ title: "Blog SEO Ecommerce | Variedades Nora", description: "Guias para elegir bolsos, carteras, mochilas, cosmeticos, perfumes, accesorios y regalos en Variedades Nora.", canonical, prefix, schema })}
   </head>
   <body>
     ${header(prefix)}
@@ -1628,7 +1752,7 @@ ${paths
 function llmsTxt(paths) {
   return `# Variedades Nora
 
-Variedades Nora es una tienda online en Nicaragua de bolsos, carteras, mochilas, cangureras, perfumes, ropa, accesorios de moda, ofertas, nuevos ingresos y regalos para mujer.
+Variedades Nora es una tienda online en Nicaragua de bolsos, carteras, mochilas, cangureras, cosmeticos, maquillaje, cremas, productos para cabello, perfumes, ropa, accesorios de moda, ofertas, nuevos ingresos y regalos para mujer.
 
 Compra principal: por WhatsApp en ${wa("Hola, Variedades Nora. Quiero consultar productos disponibles.")}
 Telefono: ${DISPLAY_PHONE}
@@ -1643,6 +1767,7 @@ Paginas comerciales principales:
 - ${BASE_URL}mochilas/ - Mochilas escolares y casuales
 - ${BASE_URL}cangureras/ - Cangureras modernas
 - ${BASE_URL}perfumes/ - Perfumes para mujer
+- ${BASE_URL}cosmeticos/ - Cosmeticos, maquillaje, cremas y cabello
 - ${BASE_URL}ropa/ - Ropa para mujer
 - ${BASE_URL}accesorios/ - Accesorios de moda
 - ${BASE_URL}ofertas/ - Ofertas
