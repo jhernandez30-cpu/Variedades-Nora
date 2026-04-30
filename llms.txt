@@ -1,0 +1,27 @@
+# Variedades Nora
+
+Variedades Nora es una tienda online en Nicaragua de bolsos, carteras, mochilas, cangureras, perfumes, ropa, accesorios de moda, ofertas, nuevos ingresos y regalos para mujer.
+
+Compra principal: por WhatsApp en https://wa.me/50582299406?text=Hola%2C%20Variedades%20Nora.%20Quiero%20consultar%20productos%20disponibles.
+Telefono: +505 8229 9406
+Ubicacion: Semaforo 1 de Mayo, 7 cuadras al lago, Americas #1 Sector D, casa 1547, Nicaragua.
+
+Paginas comerciales principales:
+- https://jhernandez30-cpu.github.io/Variedades-Nora/bolsos/ - Bolsos en Nicaragua
+- https://jhernandez30-cpu.github.io/Variedades-Nora/bolsos/bolsos-para-mujer/ - Bolsos para mujer en Nicaragua
+- https://jhernandez30-cpu.github.io/Variedades-Nora/carteras/ - Carteras para mujer
+- https://jhernandez30-cpu.github.io/Variedades-Nora/mochilas/ - Mochilas escolares y casuales
+- https://jhernandez30-cpu.github.io/Variedades-Nora/cangureras/ - Cangureras modernas
+- https://jhernandez30-cpu.github.io/Variedades-Nora/perfumes/ - Perfumes para mujer
+- https://jhernandez30-cpu.github.io/Variedades-Nora/ropa/ - Ropa para mujer
+- https://jhernandez30-cpu.github.io/Variedades-Nora/accesorios/ - Accesorios de moda
+- https://jhernandez30-cpu.github.io/Variedades-Nora/ofertas/ - Ofertas
+- https://jhernandez30-cpu.github.io/Variedades-Nora/nuevos-ingresos/ - Nuevos ingresos
+
+Politicas importantes:
+- https://jhernandez30-cpu.github.io/Variedades-Nora/politica-de-envios/
+- https://jhernandez30-cpu.github.io/Variedades-Nora/politica-de-cambios/
+- https://jhernandez30-cpu.github.io/Variedades-Nora/politica-de-privacidad/
+- https://jhernandez30-cpu.github.io/Variedades-Nora/terminos-y-condiciones/
+
+Sitemap XML: https://jhernandez30-cpu.github.io/Variedades-Nora/sitemap.xml
