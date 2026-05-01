@@ -8,6 +8,7 @@ const DISPLAY_PHONE = "+505 8229 9406";
 const ADDRESS = "Semaforo 1 de Mayo, 7 cuadras al lago, Americas #1 Sector D, casa 1547";
 const GOOGLE_BUSINESS_URL = "https://share.google/BwcHptNaixBM4b5Sg";
 const GOOGLE_REVIEW_URL = "https://g.page/r/CXvv5OQDFuF4EBM/review";
+const INSTAGRAM_URL = "https://www.instagram.com/variedadez_nora?igsh=NGIybzFmczRqZ3o4";
 const LASTMOD = "2026-05-01";
 const PRICE_RANGE_LABEL = "Desde C$ 50 hasta C$ 1200";
 const PRICE_RANGE_SCHEMA = "C$ 50 - C$ 1200";
@@ -929,6 +930,7 @@ function footer(prefix) {
           <div class="footer-links stacked">
             <a href="${wa("Hola, Variedades Nora. Quiero consultar productos disponibles.")}" data-whatsapp>WhatsApp</a>
             <a href="https://www.facebook.com/share/1Az3mAWps9/" target="_blank" rel="noopener">Facebook</a>
+            <a href="${INSTAGRAM_URL}" target="_blank" rel="noopener">Instagram</a>
             <a href="${link(prefix, "contacto/")}">Contacto</a>
             <a href="${link(prefix, "sobre-nosotros/")}">Sobre nosotros</a>
           </div>
@@ -1091,7 +1093,7 @@ function baseOrganizationSchema() {
     url: BASE_URL,
     logo: `${BASE_URL}assets/img/logo-variedades-nora.png`,
     description: "Tienda online nicaraguense de bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa y accesorios de moda.",
-    sameAs: ["https://www.facebook.com/share/1Az3mAWps9/"],
+    sameAs: ["https://www.facebook.com/share/1Az3mAWps9/", INSTAGRAM_URL],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: `+${PHONE}`,
@@ -1370,6 +1372,7 @@ ${head({
             <a class="btn btn-primary" href="${wa("Hola, Variedades Nora. Quiero consultar productos disponibles.")}" data-whatsapp>Consultar por WhatsApp</a>
             <ul class="contact-details" aria-label="Datos de contacto de Variedades Nora">
               <li><strong>WhatsApp:</strong> <a href="tel:+${PHONE}">${DISPLAY_PHONE}</a></li>
+              <li><strong>Instagram:</strong> <a href="${INSTAGRAM_URL}" target="_blank" rel="noopener">@variedadez_nora</a></li>
               <li><strong>Direccion:</strong> ${ADDRESS}</li>
               <li><strong>Horario:</strong> 24/7 de lunes a domingo</li>
               <li><strong>Area de atencion:</strong> Nicaragua</li>
