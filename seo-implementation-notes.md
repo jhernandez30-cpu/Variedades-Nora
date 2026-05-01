@@ -1,6 +1,6 @@
 # Implementacion SEO Variedades Nora
 
-Fecha: 2026-04-30
+Fecha: 2026-05-01
 
 Se genero una arquitectura ecommerce estatica para GitHub Pages con home, categorias, subcategorias, productos destacados, blog, politicas, sitemap, robots y llms.txt.
 
@@ -13,7 +13,7 @@ Se genero una arquitectura ecommerce estatica para GitHub Pages con home, catego
 - WebPage
 - CollectionPage
 - Product
-- Offer
+- AggregateOffer
 - ItemList
 - BreadcrumbList
 - FAQPage

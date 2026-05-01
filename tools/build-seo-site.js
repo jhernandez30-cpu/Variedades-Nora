@@ -8,7 +8,12 @@ const DISPLAY_PHONE = "+505 8229 9406";
 const ADDRESS = "Semaforo 1 de Mayo, 7 cuadras al lago, Americas #1 Sector D, casa 1547";
 const GOOGLE_BUSINESS_URL = "https://share.google/BwcHptNaixBM4b5Sg";
 const GOOGLE_REVIEW_URL = "https://g.page/r/CXvv5OQDFuF4EBM/review";
-const LASTMOD = "2026-04-30";
+const LASTMOD = "2026-05-01";
+const PRICE_RANGE_LABEL = "Desde C$ 50 hasta C$ 1200";
+const PRICE_RANGE_SCHEMA = "C$ 50 - C$ 1200";
+const PRICE_LOW = "50.00";
+const PRICE_HIGH = "1200.00";
+const CANGURERA_FEATURED_IMAGE = "assets/img/optimized/cangurera-destacada.jpeg";
 
 const writeFile = (relativePath, content) => {
   const fullPath = path.join(ROOT, relativePath);
@@ -31,6 +36,8 @@ const enc = (value) => encodeURI(value);
 const wa = (message) => `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
 const link = (prefix, href) => `${prefix}${href}`;
 const homeAnchor = (prefix, anchor) => (prefix ? `${prefix}${anchor ? `#${anchor}` : ""}` : anchor ? `#${anchor}` : "#inicio");
+const assetUrl = (assetPath) => `${BASE_URL}${enc(assetPath)}`;
+const priceLabel = () => PRICE_RANGE_LABEL;
 
 const products = [
   {
@@ -41,7 +48,7 @@ const products = [
     badge: "TOP ventas",
     image: "assets/img/optimized/producto-bolso-ejecutivo.webp",
     price: "850.00",
-    shortPrice: "Desde C$850",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Bolso moderno para trabajo, salidas y uso diario, con acabado elegante y facil de combinar.",
     status: "Disponible",
     material: "Cuero sintetico",
@@ -59,7 +66,7 @@ const products = [
     badge: "Nuevo",
     image: "assets/img/optimized/producto-cartera-mano.webp",
     price: "620.00",
-    shortPrice: "Desde C$620",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Cartera compacta para salidas, eventos y combinaciones casuales o elegantes.",
     status: "Nuevo ingreso",
     material: "Cuero sintetico",
@@ -77,7 +84,7 @@ const products = [
     badge: "TOP ventas",
     image: "assets/img/optimized/producto-mochila-urbana.webp",
     price: "780.00",
-    shortPrice: "Desde C$780",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Mochila practica para universidad, trabajo, salidas y actividades de todos los dias.",
     status: "Disponible",
     material: "Poliester",
@@ -92,14 +99,14 @@ const products = [
     name: "Cangurera moderna ajustable",
     category: "Cangureras",
     categorySlug: "cangureras/cangureras-modernas/",
-    badge: "Practica",
-    image: "assets/img/optimized/producto-cangurera-casual.webp",
+    badge: "Destacada",
+    image: CANGURERA_FEATURED_IMAGE,
     price: "420.00",
-    shortPrice: "Desde C$420",
-    description: "Cangurera liviana para llevar celular, llaves y basicos sin perder comodidad.",
-    status: "Disponible",
-    material: "Lona",
-    color: "Cafe",
+    shortPrice: PRICE_RANGE_LABEL,
+    description: "Cangurera destacada para llevar celular, llaves y basicos con comodidad y estilo.",
+    status: "Nuevo ingreso",
+    material: "Cuero sintetico",
+    color: "Blanco",
     use: "Diario",
     style: "Casual",
     rating: "4.8",
@@ -113,7 +120,7 @@ const products = [
     badge: "Nuevo",
     image: "assets/img/optimized/producto-bolso-glam.webp",
     price: "950.00",
-    shortPrice: "Desde C$950",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Bolso llamativo para estrenar, regalar o elevar un outfit de temporada.",
     status: "Ultimas unidades",
     material: "Cuero sintetico",
@@ -131,7 +138,7 @@ const products = [
     badge: "Oferta",
     image: "assets/img/optimized/producto-cartera-textura.webp",
     price: "540.00",
-    shortPrice: "Desde C$540",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Cartera pequena con textura, ideal para combinar con looks casuales o elegantes.",
     status: "Oferta disponible",
     material: "Cuero sintetico",
@@ -153,7 +160,7 @@ const allGridProducts = [
     badge: "Casual",
     image: "assets/img/optimized/categoria-bolsos.webp",
     price: "700.00",
-    shortPrice: "Desde C$700",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Bolso cruzado para moverte comoda y llevar lo esencial con estilo.",
     status: "Consultar disponibilidad",
     rating: "4.7",
@@ -167,7 +174,7 @@ const allGridProducts = [
     badge: "Escolar",
     image: "assets/img/optimized/categoria-mochilas.webp",
     price: "760.00",
-    shortPrice: "Desde C$760",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Mochila con espacio para clases, universidad y rutina diaria.",
     status: "Consultar disponibilidad",
     rating: "4.8",
@@ -181,7 +188,7 @@ const allGridProducts = [
     badge: "Regalo",
     image: "assets/img/portfolio/Cosmetico/Cremas/625186152_1475484451245786_6504749630190652710_n.jpg",
     price: "650.00",
-    shortPrice: "Desde C$650",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Opcion femenina para detalle, cumpleanos o sorpresa especial.",
     status: "Consultar disponibilidad",
     rating: "4.6",
@@ -195,7 +202,7 @@ const allGridProducts = [
     badge: "Maquillaje",
     image: "assets/img/portfolio/Cosmetico/Maquillaje/623431721_1476461294481435_7546205528314610255_n.jpg",
     price: "350.00",
-    shortPrice: "Desde C$350",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Producto de maquillaje para uso diario, retoques rapidos y regalos practicos.",
     status: "Consultar disponibilidad",
     rating: "4.7",
@@ -209,7 +216,7 @@ const allGridProducts = [
     badge: "Nuevo",
     image: "assets/img/portfolio/Cosmetico/Maquillaje Correano/623408932_1475356677925230_7379679527955244234_n.jpg",
     price: "420.00",
-    shortPrice: "Desde C$420",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Maquillaje coreano para renovar tus basicos de belleza y cuidado personal.",
     status: "Nuevo ingreso",
     rating: "4.8",
@@ -223,7 +230,7 @@ const allGridProducts = [
     badge: "Cuidado",
     image: "assets/img/portfolio/Cosmetico/Cremas/623415827_1475484354579129_8458282017946347412_n.jpg",
     price: "300.00",
-    shortPrice: "Desde C$300",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Crema de cuidado personal para completar tu rutina diaria o regalar.",
     status: "Consultar disponibilidad",
     rating: "4.7",
@@ -237,7 +244,7 @@ const allGridProducts = [
     badge: "Cabello",
     image: "assets/img/portfolio/Cosmetico/Cabello/623531292_1475397751254456_8324213922419272095_n.jpg",
     price: "280.00",
-    shortPrice: "Desde C$280",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Producto para cabello disponible en el catalogo de cosmeticos de Variedades Nora.",
     status: "Consultar por WhatsApp",
     rating: "4.6",
@@ -251,7 +258,7 @@ const allGridProducts = [
     badge: "Nuevo",
     image: "assets/img/optimized/hero-side.webp",
     price: "480.00",
-    shortPrice: "Desde C$480",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Prenda casual para combinar con bolsos, carteras y accesorios.",
     status: "Catalogo en actualizacion",
     rating: "4.6",
@@ -265,7 +272,7 @@ const allGridProducts = [
     badge: "Regalo",
     image: "assets/img/optimized/logo-variedades-nora.webp",
     price: "300.00",
-    shortPrice: "Desde C$300",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Detalles practicos para complementar un look o sorprender a alguien especial.",
     status: "Consultar por WhatsApp",
     rating: "4.7",
@@ -279,7 +286,7 @@ const allGridProducts = [
     badge: "Oferta",
     image: "assets/img/optimized/producto-bolso-glam.webp",
     price: "500.00",
-    shortPrice: "Desde C$500",
+    shortPrice: PRICE_RANGE_LABEL,
     description: "Seleccion de ultimas unidades y promociones disponibles por temporada.",
     status: "Oferta por tiempo limitado",
     rating: "4.8",
@@ -440,8 +447,8 @@ const categories = [
     name: "Cangureras",
     h1: "Cangureras modernas en Nicaragua",
     title: "Cangureras Modernas en Nicaragua | Variedades Nora",
-    meta: "Cangureras modernas, comodas y practicas para llevar lo esencial con estilo.",
-    image: "assets/img/optimized/categoria-cangureras.webp",
+    meta: "Cangureras modernas, comodas y practicas para llevar lo esencial con estilo. Consulta opciones desde C$ 50 hasta C$ 1200 por WhatsApp.",
+    image: CANGURERA_FEATURED_IMAGE,
     keyword: "cangureras modernas en Nicaragua",
     subcategories: ["cangureras/cangureras-modernas/", "cangureras/cangureras-para-mujer/"],
     productSlugs: ["cangurera-moderna-ajustable", "mochila-juvenil-uso-diario", "bolso-cruzado-moderno"],
@@ -451,8 +458,8 @@ const categories = [
     name: "Cangureras modernas",
     h1: "Cangureras modernas para uso diario",
     title: "Cangureras Modernas para Uso Diario | Variedades Nora",
-    meta: "Cangureras modernas y ajustables para llevar celular, llaves y basicos con comodidad.",
-    image: "assets/img/optimized/producto-cangurera-casual.webp",
+    meta: "Cangureras modernas y ajustables para llevar celular, llaves y basicos con comodidad. Precios desde C$ 50 hasta C$ 1200.",
+    image: CANGURERA_FEATURED_IMAGE,
     keyword: "cangureras modernas",
     parent: "cangureras/",
     productSlugs: ["cangurera-moderna-ajustable", "mochila-juvenil-uso-diario", "cartera-compacta-con-textura"],
@@ -462,8 +469,8 @@ const categories = [
     name: "Cangureras para mujer",
     h1: "Cangureras para mujer en Nicaragua",
     title: "Cangureras para Mujer en Nicaragua | Variedades Nora",
-    meta: "Cangureras para mujer comodas, juveniles y faciles de combinar. Compra por WhatsApp.",
-    image: "assets/img/optimized/categoria-cangureras.webp",
+    meta: "Cangureras para mujer comodas, juveniles y faciles de combinar. Compra por WhatsApp desde C$ 50 hasta C$ 1200.",
+    image: CANGURERA_FEATURED_IMAGE,
     keyword: "cangureras para mujer",
     parent: "cangureras/",
     productSlugs: ["cangurera-moderna-ajustable", "bolso-cruzado-moderno", "accesorios-de-moda-para-regalo"],
@@ -947,7 +954,7 @@ function productCard(product, prefix, { detail = true } = {}) {
         <div class="product-rating" aria-label="Valoracion ${product.rating} de 5">★★★★★ <span>${product.rating} (${product.reviews})</span></div>
         <p class="product-description">${product.description}</p>
         <div class="product-meta-row">
-          <strong class="product-price">${product.shortPrice}</strong>
+          <strong class="product-price">${priceLabel(product)}</strong>
           <span class="product-status">${product.status}</span>
         </div>
         <div class="card-actions">
@@ -977,7 +984,7 @@ function filtersHtml() {
     ["Categoria", ["Bolsos", "Carteras", "Mochilas", "Cangureras", "Perfumes", "Cosmeticos", "Ropa", "Accesorios"]],
     ["Material", ["Cuero sintetico", "Tela", "Lona", "Poliester"]],
     ["Color", ["Negro", "Cafe", "Rosado", "Blanco", "Beige", "Rojo", "Azul"]],
-    ["Precio", ["C$0-C$500", "C$500-C$1,000", "C$1,000+"]],
+    ["Precio", [PRICE_RANGE_LABEL]],
     ["Uso", ["Diario", "Trabajo", "Universidad", "Fiesta", "Regalo"]],
     ["Estilo", ["Casual", "Elegante", "Moderno", "Juvenil", "Minimalista"]],
     ["Disponibilidad", ["Disponible", "Ultimas unidades", "Nuevos ingresos", "Ofertas"]],
@@ -1103,7 +1110,7 @@ function storeSchema() {
     url: BASE_URL,
     image: `${BASE_URL}assets/img/logo-variedades-nora.png`,
     telephone: `+${PHONE}`,
-    priceRange: "$$",
+    priceRange: PRICE_RANGE_SCHEMA,
     address: {
       "@type": "PostalAddress",
       streetAddress: ADDRESS,
@@ -1130,7 +1137,7 @@ function productSchema(product, url) {
     "@type": "Product",
     "@id": `${url}#product`,
     name: product.name,
-    image: `${BASE_URL}${product.image}`,
+    image: assetUrl(product.image),
     description: product.description,
     brand: { "@id": `${BASE_URL}#organization` },
     category: product.category,
@@ -1141,10 +1148,12 @@ function productSchema(product, url) {
       reviewCount: product.reviews,
     },
     offers: {
-      "@type": "Offer",
+      "@type": "AggregateOffer",
       url,
-      price: product.price,
       priceCurrency: "NIO",
+      lowPrice: PRICE_LOW,
+      highPrice: PRICE_HIGH,
+      offerCount: 1,
       availability: product.status.includes("Ultimas") ? "https://schema.org/LimitedAvailability" : "https://schema.org/InStock",
       seller: { "@id": `${BASE_URL}#store` },
     },
@@ -1188,7 +1197,10 @@ function faqSchema() {
 
 function homePage() {
   const prefix = "";
-  const featured = products.slice(0, 6);
+  const featured = [
+    productBySlug.get("cangurera-moderna-ajustable"),
+    ...products.filter((product) => product.slug !== "cangurera-moderna-ajustable"),
+  ].filter(Boolean).slice(0, 6);
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -1550,7 +1562,7 @@ ${head({
             <h1>${product.name}</h1>
             <div class="product-rating">★★★★★ <span>${product.rating} (${product.reviews} opiniones)</span></div>
             <p>${product.description}</p>
-            <strong class="product-price product-price-large">${product.shortPrice}</strong>
+            <strong class="product-price product-price-large">${priceLabel(product)}</strong>
             <p class="product-status">${product.status}</p>
             <dl class="spec-list">
               <div><dt>Categoria</dt><dd><a href="${link(prefix, product.categorySlug)}">${product.category}</a></dd></div>
@@ -1840,7 +1852,7 @@ Se genero una arquitectura ecommerce estatica para GitHub Pages con home, catego
 - WebPage
 - CollectionPage
 - Product
-- Offer
+- AggregateOffer
 - ItemList
 - BreadcrumbList
 - FAQPage

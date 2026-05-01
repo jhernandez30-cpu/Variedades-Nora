@@ -14,6 +14,15 @@ window.PORTFOLIO_CATEGORIES = [
     ],
   },
   {
+    key: "cangureras",
+    label: "Cangureras",
+    folder: "assets/img/portfolio/Cangureras",
+    files: [
+      "WhatsApp Image 2026-05-01 at 3.31.58 PM.jpeg",
+      "WhatsApp Image 2026-05-01 at 3.31.57 PM.jpeg",
+    ],
+  },
+  {
     key: "cartera",
     label: "Carteras",
     folder: "assets/img/portfolio/Cartera",
