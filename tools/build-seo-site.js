@@ -1395,15 +1395,6 @@ ${head({
             <p>Escribenos para consultar precios, modelos, colores, fotos, ofertas, nuevos ingresos, envios y disponibilidad antes de comprar.</p>
             <a class="btn btn-primary" href="${wa("Hola, Variedades Nora. Quiero consultar productos disponibles.")}" data-whatsapp>Consultar por WhatsApp</a>
             ${socialLinks()}
-            <ul class="contact-details" aria-label="Datos de contacto de Variedades Nora">
-              <li><strong>WhatsApp:</strong> <a href="tel:+${PHONE}">${DISPLAY_PHONE}</a></li>
-              <li><strong>Facebook:</strong> <a href="${FACEBOOK_URL}" target="_blank" rel="noopener">Variedades Nora</a></li>
-              <li><strong>Instagram:</strong> <a href="${INSTAGRAM_URL}" target="_blank" rel="noopener">@variedadez_nora</a></li>
-              <li><strong>Direccion:</strong> ${ADDRESS}</li>
-              <li><strong>Horario:</strong> 24/7 de lunes a domingo</li>
-              <li><strong>Area de atencion:</strong> Nicaragua</li>
-              <li><strong>Productos:</strong> bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa y accesorios</li>
-            </ul>
           </div>
           <form class="contact-form reveal" data-contact-form>
             <label>Nombre<input type="text" name="name" placeholder="Tu nombre" autocomplete="name" required /></label>

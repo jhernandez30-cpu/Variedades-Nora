@@ -1128,27 +1128,6 @@ body.catalog-modal-open {
   grid-template-columns: 0.9fr 1fr;
 }
 
-.contact-details {
-  display: grid;
-  gap: 10px;
-  margin: 24px 0 0;
-  padding: 0;
-  color: var(--muted);
-  list-style: none;
-}
-
-.contact-details li {
-  padding: 12px 14px;
-  border: 1px solid rgba(200, 168, 90, 0.2);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.62);
-}
-
-.contact-details strong,
-.contact-details a {
-  color: var(--ink);
-}
-
 .contact-form {
   display: grid;
   gap: 16px;
