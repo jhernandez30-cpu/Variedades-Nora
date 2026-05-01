@@ -6,6 +6,7 @@ const BASE_URL = "https://jhernandez30-cpu.github.io/Variedades-Nora/";
 const PHONE = "50582299406";
 const DISPLAY_PHONE = "+505 8229 9406";
 const ADDRESS = "Semaforo 1 de Mayo, 7 cuadras al lago, Americas #1 Sector D, casa 1547";
+const FACEBOOK_URL = "https://www.facebook.com/share/1CVDnm5JWn/";
 const GOOGLE_BUSINESS_URL = "https://share.google/BwcHptNaixBM4b5Sg";
 const GOOGLE_REVIEW_URL = "https://g.page/r/CXvv5OQDFuF4EBM/review";
 const INSTAGRAM_URL = "https://www.instagram.com/variedadez_nora?igsh=NGIybzFmczRqZ3o4";
@@ -39,6 +40,31 @@ const link = (prefix, href) => `${prefix}${href}`;
 const homeAnchor = (prefix, anchor) => (prefix ? `${prefix}${anchor ? `#${anchor}` : ""}` : anchor ? `#${anchor}` : "#inicio");
 const assetUrl = (assetPath) => `${BASE_URL}${enc(assetPath)}`;
 const priceLabel = () => PRICE_RANGE_LABEL;
+
+function socialIcon(name) {
+  const icons = {
+    facebook: `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.2 8.1h2.1V4.7c-.4-.1-1.7-.2-3.2-.2-3.1 0-5.2 1.9-5.2 5.4v3H4.5v3.8h3.4v8.8h4.1v-8.8h3.4l.5-3.8H12v-2.6c0-1.1.3-2.2 2.2-2.2Z"/></svg>`,
+    instagram: `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.7 2.8h8.6c2.7 0 4.9 2.2 4.9 4.9v8.6c0 2.7-2.2 4.9-4.9 4.9H7.7c-2.7 0-4.9-2.2-4.9-4.9V7.7c0-2.7 2.2-4.9 4.9-4.9Zm8.6 16.4c1.6 0 2.9-1.3 2.9-2.9V7.7c0-1.6-1.3-2.9-2.9-2.9H7.7c-1.6 0-2.9 1.3-2.9 2.9v8.6c0 1.6 1.3 2.9 2.9 2.9h8.6ZM12 7.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2Zm0 7.2a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2Zm5-7.5a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0Z"/></svg>`,
+    whatsapp: `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.4a9.3 9.3 0 0 0-8.1 13.9l-1.2 4.4 4.5-1.2A9.3 9.3 0 1 0 12 2.4Zm0 16.8c-1.5 0-3-.4-4.2-1.3l-.3-.2-2.7.7.7-2.6-.2-.3a7.4 7.4 0 1 1 6.7 3.7Zm4.1-5.5c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.6.1-.2.2-.6.7-.8.9-.1.2-.3.2-.5.1a6 6 0 0 1-1.8-1.1 6.7 6.7 0 0 1-1.2-1.5c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.7-1.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.1 1.6.1.5-.1 1.3-.5 1.5-1 .2-.5.2-1 .1-1.1 0-.1-.2-.2-.4-.3Z"/></svg>`,
+  };
+  return icons[name] || "";
+}
+
+function socialLink({ name, href, label, extra = "" }) {
+  return `<a class="social-link social-link-${name}" href="${href}" target="_blank" rel="noopener" aria-label="${label}" ${extra}>
+            <span class="social-mark" aria-hidden="true">${socialIcon(name)}</span>
+            <span>${label}</span>
+          </a>`;
+}
+
+function socialLinks() {
+  const whatsAppMessage = "Hola, Variedades Nora. Quiero consultar productos disponibles.";
+  return `<div class="social-links" aria-label="Redes sociales de Variedades Nora">
+            ${socialLink({ name: "facebook", href: FACEBOOK_URL, label: "Facebook" })}
+            ${socialLink({ name: "instagram", href: INSTAGRAM_URL, label: "Instagram" })}
+            ${socialLink({ name: "whatsapp", href: wa(whatsAppMessage), label: "WhatsApp", extra: `data-whatsapp data-whatsapp-message="${whatsAppMessage}"` })}
+          </div>`;
+}
 
 const products = [
   {
@@ -858,7 +884,7 @@ function head({ title, description, canonical, prefix, schema, type = "website" 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="${link(prefix, "styles.css?v=20260430-seo")}" />
+    <link rel="stylesheet" href="${link(prefix, "styles.css?v=20260501-social")}" />
     ${schemaScript(schema)}
     <script defer src="${link(prefix, "script.js?v=20260430-seo")}"></script>`;
 }
@@ -886,7 +912,7 @@ function header(prefix) {
         <a href="${homeAnchor(prefix, "contacto")}">Contacto</a>
       </nav>
       <a class="whatsapp-link header-whatsapp" href="${wa("Hola, Variedades Nora. Quiero consultar el catalogo disponible.")}" data-whatsapp aria-label="Consultar por WhatsApp">
-        <span class="wa-mark">WA</span>
+        <span class="wa-mark" aria-hidden="true">${socialIcon("whatsapp")}</span>
         WhatsApp
       </a>
     </header>`;
@@ -927,10 +953,8 @@ function footer(prefix) {
         </div>
         <div class="footer-col">
           <h3>Contacto</h3>
-          <div class="footer-links stacked">
-            <a href="${wa("Hola, Variedades Nora. Quiero consultar productos disponibles.")}" data-whatsapp>WhatsApp</a>
-            <a href="https://www.facebook.com/share/1Az3mAWps9/" target="_blank" rel="noopener">Facebook</a>
-            <a href="${INSTAGRAM_URL}" target="_blank" rel="noopener">Instagram</a>
+          ${socialLinks()}
+          <div class="footer-links stacked utility-links">
             <a href="${link(prefix, "contacto/")}">Contacto</a>
             <a href="${link(prefix, "sobre-nosotros/")}">Sobre nosotros</a>
           </div>
@@ -1093,7 +1117,7 @@ function baseOrganizationSchema() {
     url: BASE_URL,
     logo: `${BASE_URL}assets/img/logo-variedades-nora.png`,
     description: "Tienda online nicaraguense de bolsos, carteras, mochilas, cangureras, cosmeticos, perfumes, ropa y accesorios de moda.",
-    sameAs: ["https://www.facebook.com/share/1Az3mAWps9/", INSTAGRAM_URL],
+    sameAs: [FACEBOOK_URL, INSTAGRAM_URL],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: `+${PHONE}`,
@@ -1370,8 +1394,10 @@ ${head({
             <h2>Compra facil por WhatsApp con atencion personalizada</h2>
             <p>Escribenos para consultar precios, modelos, colores, fotos, ofertas, nuevos ingresos, envios y disponibilidad antes de comprar.</p>
             <a class="btn btn-primary" href="${wa("Hola, Variedades Nora. Quiero consultar productos disponibles.")}" data-whatsapp>Consultar por WhatsApp</a>
+            ${socialLinks()}
             <ul class="contact-details" aria-label="Datos de contacto de Variedades Nora">
               <li><strong>WhatsApp:</strong> <a href="tel:+${PHONE}">${DISPLAY_PHONE}</a></li>
+              <li><strong>Facebook:</strong> <a href="${FACEBOOK_URL}" target="_blank" rel="noopener">Variedades Nora</a></li>
               <li><strong>Instagram:</strong> <a href="${INSTAGRAM_URL}" target="_blank" rel="noopener">@variedadez_nora</a></li>
               <li><strong>Direccion:</strong> ${ADDRESS}</li>
               <li><strong>Horario:</strong> 24/7 de lunes a domingo</li>
